@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | ZKP Exam Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .dashboard-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .dashboard-card {
+            background: #102b4e;
+            border: 1px solid #24517e;
+            border-radius: 12px;
+            padding: 18px;
+        }
+
+        .dashboard-card h3 {
+            font-size: 15px;
+            color: #a9c9ed;
+        }
+
+        .dashboard-card p {
+            font-size: 21px;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+
+        .dashboard-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .dashboard-actions a {
+            display: inline-block;
+            background: #087cf0;
+            color: white;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+        }
+
+        .dashboard-note {
+            color: #b7c9dc;
+            font-size: 13px;
+            margin-top: 24px;
+        }
+    </style>
+</head>
+<body>
+    <main class="card dashboard">
+        <div class="dashboard-header">
+            <div>
+                <h1>Student Dashboard</h1>
+                <p>Zero-Knowledge Exam Verification Portal</p>
+            </div>
+            <span>Student ID: 2026CS001</span>
+        </div>
+
+        <section class="dashboard-cards">
+            <div class="dashboard-card">
+                <h3>Student ID</h3>
+                <p>2026CS001</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Exam Name</h3>
+                <p>Data Structures</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Required Marks</h3>
+                <p id="thresholdDisplay">40</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Demo Status</h3>
+                <p>Ready</p>
+            </div>
+        </section>
+
+        <section class="dashboard-card">
+            <h2>Exam Verification</h2>
+            <p>
+                Generate a zero-knowledge proof to demonstrate
+                that your marks meet the required threshold.
+            </p>
+
+            <div class="dashboard-actions">
+                <a href="index.html">Generate ZK Proof</a>
+                <a href="verify.html">Verify Proof</a>
+            </div>
+        </section>
+
+        <p class="dashboard-note">
+            Demo project: student and exam details are sample data.
+            This dashboard does not authenticate college-issued marks.
+        </p>
+
+        <p><a href="index.html">Back to Student Page</a></p>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

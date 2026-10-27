@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZKP Exam Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <h1>Zero-Knowledge Exam Verification</h1>
+        <p>Verify eligibility without showing your marks in the result.</p>
+
+        <form id="verifyForm">
+            <label for="marks">Your Marks (Private)</label>
+            <input id="marks" type="number" min="0" max="100" required>
+
+            <label for="threshold">Required Marks (Public)</label>
+            <input id="threshold" type="number" min="0" max="100"
+                   value="40" required>
+
+            <button id="verifyBtn" type="submit">Generate ZK Proof</button>
+        </form>
+
+        <p id="status">Ready to verify.</p>
+        <pre id="result"></pre>
+
+        <small>Academic demo only. This does not verify college-issued marks.</small>
+    </main>
+
+    <script src="../node_modules/snarkjs/build/snarkjs.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

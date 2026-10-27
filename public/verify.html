@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify ZK Proof</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <h1>Verify ZK Proof</h1>
+        <p>Upload a proof file to check its cryptographic validity.</p>
+
+        <label for="proofFile">Select zkp-proof.json</label>
+        <input type="file" id="proofFile" accept=".json,application/json">
+
+        <button id="verifyBtn" type="button">Verify Proof</button>
+
+        <p id="status">Waiting for proof file...</p>
+        <pre id="result"></pre>
+
+        <p><a href="index.html">Back to Student Page</a></p>
+
+        <small>This demo verifies proof validity, not college result authenticity.</small>
+    </main>
+
+    <script src="../node_modules/snarkjs/build/snarkjs.min.js"></script>
+    <script src="verify.js"></script>
+</body>
+</html>

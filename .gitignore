@@ -1,0 +1,15 @@
+﻿node_modules/
+.env
+.env.*
+!.env.example
+
+input.json
+proof.json
+public.json
+witness.wtns
+zkp-proof-test*.json
+
+*.r1cs
+*.sym
+pot*.ptau
+marks_0000.zkey
