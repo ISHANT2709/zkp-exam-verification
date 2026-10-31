@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,28 +7,67 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="card">
-        <h1>Zero-Knowledge Exam Verification</h1>
-        <p>Verify eligibility without showing your marks in the result.</p>
 
-        <form id="verifyForm">
-            <label for="marks">Your Marks (Private)</label>
-            <input id="marks" type="number" min="0" max="100" required>
+<main class="card">
 
-            <label for="threshold">Required Marks (Public)</label>
-            <input id="threshold" type="number" min="0" max="100"
-                   value="40" required>
+    <h1>Zero-Knowledge Exam Verification</h1>
+    <p>Verify student eligibility using Zero-Knowledge Proof.</p>
 
-            <button id="verifyBtn" type="submit">Generate ZK Proof</button>
-        </form>
+    <form id="verifyForm">
 
-        <p id="status">Ready to verify.</p>
-        <pre id="result"></pre>
+        <label for="studentName">Student Name</label>
+        <input
+            id="studentName"
+            type="text"
+            placeholder="Enter student name"
+            required
+        >
 
-        <small>Academic demo only. This does not verify college-issued marks.</small>
-    </main>
-    <script src="/vendor/snarkjs.min.js"></script>
-    <script src="/script.js"></script>
+        <label for="rollNumber">Roll Number</label>
+        <input
+            id="rollNumber"
+            type="text"
+            placeholder="Enter roll number"
+            required
+        >
+
+        <label for="marks">Your Marks (Private)</label>
+        <input
+            id="marks"
+            type="number"
+            min="0"
+            max="100"
+            required
+        >
+
+        <label for="threshold">Required Marks (Public)</label>
+        <input
+            id="threshold"
+            type="number"
+            min="0"
+            max="100"
+            value="40"
+            required
+        >
+
+        <button id="verifyBtn" type="submit">
+            Generate ZK Proof
+        </button>
+
+    </form>
+
+    <p id="status">Ready to verify student.</p>
+
+    <pre id="result"></pre>
+
+    <small>
+        Academic demo only. This does not verify college-issued marks.
+    </small>
+
+</main>
+
+<script src="/vendor/snarkjs.min.js"></script>
+<script src="/script.js"></script>
 
 </body>
 </html>
